@@ -193,7 +193,7 @@ function SuccessContent() {
           {sessionData && sessionData.amount_total && (
             <p className="text-lg text-gray-400 mb-8">
               <span className="text-adhd-yellow font-semibold">
-                ADHD Identity Method
+                ADHD Harmony Program
               </span>
               {" • "}
               <span className="text-adhd-green font-semibold">

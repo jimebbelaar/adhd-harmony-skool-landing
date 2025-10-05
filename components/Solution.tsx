@@ -1,10 +1,5 @@
-// ================
-// components/Solution.tsx
-// ================
-"use client"; // Add this if you're using app router
+"use client";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-// Add this import at the top of your existing Solution.tsx file:
 import Image from "next/image";
 
 const steps = [
@@ -59,63 +54,15 @@ const whatYouGet = [
 ];
 
 export default function Solution() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-
   return (
     <>
-      {/* Process Section */}
-      {/* <section ref={ref} className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <p className="text-adhd-yellow font-semibold mb-4">
-              The breakthrough that changes everything
-            </p>
-            <h2 className="text-3xl lg:text-5xl font-black mb-4">
-              Stop Fighting Your ADHD.
-              <br />
-              Use It As Your <span className="gradient-text">Superpower.</span>
-            </h2>
-            <p className="text-xl text-gray-400">
-              In 60 minutes, discover who you really are underneath all the
-              masks - and get a personal action plan that fits how your brain
-              works.
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="text-center"
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-adhd-yellow to-adhd-orange rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-black">
-                  {step.number}
-                </div>
-                <h3 className="text-2xl font-black mb-2">{step.title}</h3>
-                <p className="text-gray-400">{step.description}</p>
-                <div className="text-adhd-yellow font-semibold mt-4">
-                  {step.duration}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* What You Get Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-3xl lg:text-5xl font-black text-center mb-16"
           >
@@ -128,7 +75,8 @@ export default function Solution() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass-effect p-8 rounded-2xl border border-adhd-yellow/20"
               >
@@ -142,12 +90,14 @@ export default function Solution() {
           </div>
         </div>
       </section>
+
       {/* Comparison Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-3xl lg:text-5xl font-black text-center mb-16"
           >
@@ -159,6 +109,7 @@ export default function Solution() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-black mb-8 text-adhd-red">
@@ -188,6 +139,7 @@ export default function Solution() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-black mb-8 text-adhd-green">
@@ -215,6 +167,7 @@ export default function Solution() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-16 text-center"
           >
@@ -241,6 +194,7 @@ export default function Solution() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto glass-effect rounded-3xl p-12 border border-adhd-yellow/30"
           >

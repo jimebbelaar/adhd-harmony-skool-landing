@@ -63,7 +63,7 @@ export default function EmbeddedCheckoutForm() {
     price: "27",
     currency: "USD",
     productName: "ADHD Identity Method",
-    originalPrice: "1035",
+    originalPrice: "10282",
   });
   const [priceLoading, setPriceLoading] = useState(true);
 
@@ -90,7 +90,7 @@ export default function EmbeddedCheckoutForm() {
             price: parseFloat(data.price).toFixed(0),
             originalPrice: data.originalPrice
               ? parseFloat(data.originalPrice).toFixed(0)
-              : "1035",
+              : "10282",
           });
         }
       } catch (error) {
@@ -342,7 +342,7 @@ export default function EmbeddedCheckoutForm() {
                   <div className="flex items-center gap-2">
                     <span className="text-gray-400 text-sm">Total value:</span>
                     <span className="text-gray-400 line-through text-xl font-medium">
-                      ${priceInfo.originalPrice}
+                      ${priceInfo.originalPrice.toLocaleString()}
                     </span>
                   </div>
                 )}

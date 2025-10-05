@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
         currency: "USD",
         productName: "ADHD Identity Method",
         productDescription: null,
-        originalPrice: "1035.00",
+        originalPrice: "10282.00",
         priceId: null,
         error: error.message,
       },

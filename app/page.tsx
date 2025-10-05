@@ -10,6 +10,7 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import CountdownTimer from "@/components/CountdownTimer";
 import { trackEvent } from "@/lib/meta-pixel";
+import StickyBottomCTA from "@/components/StickyBottomCTA";
 
 export default function Home() {
   useEffect(() => {
@@ -78,7 +79,7 @@ export default function Home() {
   return (
     <>
       <CountdownTimer />
-      {/* <StickyBottomCTA /> */}
+      <StickyBottomCTA />
       <main className="min-h-screen">
         <Hero />
         <Testimonials />
@@ -86,7 +87,7 @@ export default function Home() {
         <Solution />
         <ValueStack />
         <FAQ />
-        <FinalCTA />
+        {/* <FinalCTA /> */}
       </main>
       <footer className="py-12 border-t border-white/10 pb-30">
         <div className="container mx-auto px-4 text-center text-gray-400">

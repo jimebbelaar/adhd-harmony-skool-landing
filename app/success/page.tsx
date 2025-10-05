@@ -65,9 +65,9 @@ function SuccessContent() {
             const lastName = nameParts.slice(1).join(" ") || "";
 
             trackEvent("Purchase", {
-              value: data.amount_total ? data.amount_total / 100 : 27.0,
+              value: data.amount_total ? data.amount_total / 100 : 497.0,
               currency: data.currency?.toUpperCase() || "USD",
-              content_name: "ADHD Identity Method",
+              content_name: "ADHD Harmony Program",
               content_type: "product",
 
               // Customer data (will be hashed by CAPI)
@@ -103,9 +103,9 @@ function SuccessContent() {
       hasTrackedRef.current = true; // Mark as tracked
 
       trackEvent("Purchase", {
-        value: 27.0,
+        value: 497.0,
         currency: "USD",
-        content_name: "ADHD Identity Method",
+        content_name: "ADHD Harmony Program",
         content_type: "product",
         payment_intent: paymentIntent,
       });

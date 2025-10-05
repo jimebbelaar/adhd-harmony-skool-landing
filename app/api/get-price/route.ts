@@ -39,9 +39,9 @@ export async function GET(request: NextRequest) {
     // Return a fallback response if there's an error
     return NextResponse.json(
       {
-        price: "27.00",
+        price: "498.00",
         currency: "USD",
-        productName: "ADHD Identity Method",
+        productName: "ADHD Harmony Program",
         productDescription: null,
         originalPrice: "10282.00",
         priceId: null,

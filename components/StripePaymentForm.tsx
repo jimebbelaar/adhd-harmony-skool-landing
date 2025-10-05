@@ -60,9 +60,9 @@ export default function EmbeddedCheckoutForm() {
   const [mounted, setMounted] = useState(false);
 
   const [priceInfo, setPriceInfo] = useState<PriceInfo>({
-    price: "27",
+    price: "497",
     currency: "USD",
-    productName: "ADHD Identity Method",
+    productName: "ADHD Harmony Program",
     originalPrice: "10282",
   });
   const [priceLoading, setPriceLoading] = useState(true);

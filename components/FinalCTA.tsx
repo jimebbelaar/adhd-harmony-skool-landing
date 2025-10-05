@@ -116,7 +116,7 @@ export default function FinalCTA() {
               </ul>
               <div className="mt-6 pt-6 border-t border-adhd-green/30">
                 <p className="text-sm text-adhd-green font-bold">
-                  Cost: $497 once (worth $12,279)
+                  Cost: $497 once (worth $10,282)
                 </p>
               </div>
             </motion.div>

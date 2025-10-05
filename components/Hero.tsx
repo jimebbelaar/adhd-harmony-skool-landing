@@ -12,12 +12,12 @@ function VTurbPlayer() {
       <div
         dangerouslySetInnerHTML={{
           __html:
-            '<vturb-smartplayer id="vid-68e1ffaa1ae9afdf362a0a6b" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>',
+            '<vturb-smartplayer id="vid-68e21f92a64eb8b16ea4ec61" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>',
         }}
       />
       <Helmet>
         <script type="text/javascript">
-          {`var s=document.createElement("script"); s.src="https://scripts.converteai.net/f3ae95a0-ae37-43cb-a4df-9c965554bcfa/players/68e1ffaa1ae9afdf362a0a6b/v4/player.js", s.async=!0,document.head.appendChild(s);`}
+          {`var s=document.createElement("script"); s.src="https://scripts.converteai.net/f3ae95a0-ae37-43cb-a4df-9c965554bcfa/players/68e21f92a64eb8b16ea4ec61/v4/player.js", s.async=!0,document.head.appendChild(s);`}
         </script>
       </Helmet>
     </>
@@ -115,7 +115,7 @@ export default function Hero() {
             className="relative order-1 lg:order-2 w-full"
           >
             <div className="glass-effect rounded-2xl p-2 glow-yellow">
-              <div className="relative aspect-[1080/1350] bg-dark-surface rounded-xl overflow-hidden">
+              <div className="relative aspect-[1920/1080] bg-dark-surface rounded-xl overflow-hidden">
                 <VTurbPlayer />
               </div>
             </div>

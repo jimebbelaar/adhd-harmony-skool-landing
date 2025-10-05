@@ -172,7 +172,7 @@ export default function Solution() {
             className="mt-16 text-center"
           >
             <div className="glass-effect p-8 rounded-2xl max-w-3xl mx-auto border border-adhd-yellow/20">
-              <p className="text-xl font-bold text-adhd-yellow mb-4">
+              <p className="text-xl font-black text-adhd-yellow mb-4">
                 The difference that changes everything:
               </p>
               <p className="text-lg text-gray-300">

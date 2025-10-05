@@ -1,8 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import StripePaymentForm from "./StripePaymentForm";
 import { CheckCircle, X, Zap, Heart, Clock, Shield } from "lucide-react";
+
+// VTurb Player Component following official React guide
+function VTurbPlayer() {
+  return (
+    <>
+      <div
+        dangerouslySetInnerHTML={{
+          __html:
+            '<vturb-smartplayer id="vid-68e1ffaa1ae9afdf362a0a6b" style="display: block; margin: 0 auto; width: 100%; height: 100%;"></vturb-smartplayer>',
+        }}
+      />
+      <Helmet>
+        <script type="text/javascript">
+          {`var s=document.createElement("script"); s.src="https://scripts.converteai.net/f3ae95a0-ae37-43cb-a4df-9c965554bcfa/players/68e1ffaa1ae9afdf362a0a6b/v4/player.js", s.async=!0,document.head.appendChild(s);`}
+        </script>
+      </Helmet>
+    </>
+  );
+}
 
 export default function Hero() {
   return (
@@ -38,9 +58,10 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-2xl sm:text-2xl lg:text-4xl font-black mb-6"
+                className="text-3xl sm:text-3xl lg:text-4xl font-black mb-6"
               >
-                Finally Launch Your <span className="gradient-text">$10K/Month </span>
+                Finally Launch Your{" "}
+                <span className="gradient-text">$10K/Month </span>
                 Business <span className="gradient-text">In 90 Days </span>
                 With The Only System That Actually Works For ADHD Brains
               </motion.h1>
@@ -52,8 +73,8 @@ export default function Hero() {
                 className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed"
               >
                 You're about to discover why you've never finished a business
-                program (and it's not what you think) - get the only system
-                that actually works with your ADHD, not against it
+                program (and it's not what you think) - get the only system that
+                actually works with your ADHD, not against it
               </motion.p>
             </div>
 
@@ -73,22 +94,6 @@ export default function Hero() {
                   <span className="font-medium text-xs">ADHD-proof system</span>
                 </div>
               </div>
-
-              {/* Additional trust indicators */}
-              {/* <div className="flex flex-wrap gap-6 pt-4">
-                <div className="flex items-center gap-2 text-sm text-gray-400">
-                  <Shield className="w-4 h-4 text-adhd-green" />
-                  <span>30-day money-back guarantee</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-gray-400">
-                  <Clock className="w-4 h-4 text-adhd-yellow" />
-                  <span>Instant access (start in 2 min)</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-gray-400">
-                  <Heart className="w-4 h-4 text-adhd-red" />
-                  <span>Made by ADHDer for ADHDers</span>
-                </div>
-              </div> */}
             </motion.div>
 
             {/* Desktop only: Payment form */}
@@ -102,7 +107,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Content - Loom Video - Shows first on mobile */}
+          {/* Right Content - VTurb Video - Shows first on mobile */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -111,12 +116,7 @@ export default function Hero() {
           >
             <div className="glass-effect rounded-2xl p-2 glow-yellow">
               <div className="relative aspect-[1080/1350] bg-dark-surface rounded-xl overflow-hidden">
-                <iframe
-                  src="https://www.loom.com/embed/4c89601b6fc8411d89982db83df48bdc?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
-                  frameBorder="0"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
+                <VTurbPlayer />
               </div>
             </div>
           </motion.div>

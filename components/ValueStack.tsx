@@ -24,11 +24,11 @@ const valueItems = [
     value: "$2,997",
   },
   {
-    icon: Phone,
-    title: "Weekly Group Coaching Calls with Jim (12 weeks)",
+    icon: FileText,
+    title: "Plug-and-Play Templates",
     description:
-      "Get unstuck in real-time. Ask anything. Recordings if you miss.",
-    value: "$1,997",
+      "Website, $10K+ offer script, emails that sell, sales call scripts. Everything done for you.",
+    value: "$797",
   },
   {
     icon: Zap,
@@ -38,19 +38,20 @@ const valueItems = [
     value: "$997",
   },
   {
-    icon: FileText,
-    title: "Plug-and-Play Templates",
-    description:
-      "Website, $10K+ offer script, emails that sell, sales call scripts. Everything done for you.",
-    value: "$797",
-  },
-  {
     icon: Users,
     title: "Private ADHD Entrepreneur Community",
     description:
       "Other members who get it. 24/7 support. Never feel alone in the 3am spirals again.",
     value: "$497",
   },
+  {
+    icon: Phone,
+    title: "Weekly Group Coaching Calls with Jim",
+    description:
+      "Get unstuck in real-time. Ask anything. Recordings if you miss.",
+    value: "$1,997",
+  },
+
   {
     icon: MessageSquare,
     title: "BONUS: Jim's Direct Access (90 days)",
@@ -208,10 +209,6 @@ export default function ValueStack() {
             </h3>
             <p className="text-xl font-bold text-adhd-green">
               Don't launch in 90 days = 100% money back
-            </p>
-            <p className="text-sm text-gray-400 mt-4">
-              No tricks. No "you didn't try hard enough." Just results or
-              refund.
             </p>
           </div>
         </motion.div>

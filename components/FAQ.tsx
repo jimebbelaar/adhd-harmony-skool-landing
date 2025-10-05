@@ -86,7 +86,7 @@ export default function FAQ() {
           <div className="inline-flex items-center gap-2 mb-6">
             <span className="indicator-yellow px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
               <MessageCircle className="w-4 h-4" />
-              Your concerns are valid. Here are real answers.
+              FAQ
             </span>
           </div>
           <h2 className="text-3xl lg:text-5xl font-black">

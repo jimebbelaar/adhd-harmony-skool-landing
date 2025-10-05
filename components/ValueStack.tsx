@@ -18,7 +18,7 @@ import {
 const valueItems = [
   {
     icon: Brain,
-    title: "90-Day Business Launch Program (9 Modules)",
+    title: "90-Day Business Launch Program (All Modules)",
     description:
       "Identity transformation + business systems. From chronic starter to $10K/month.",
     value: "$2,997",
@@ -39,7 +39,7 @@ const valueItems = [
   },
   {
     icon: FileText,
-    title: "Copy-Paste Launch Templates",
+    title: "Plug-and-Play Templates",
     description:
       "Website, $10K+ offer script, emails that sell, sales call scripts. Everything done for you.",
     value: "$797",
@@ -55,7 +55,7 @@ const valueItems = [
     icon: MessageSquare,
     title: "BONUS: Jim's Direct Access (90 days)",
     description:
-      "Message Jim directly. Get personal video responses within 24 hours. Usually $2,997 alone.",
+      "Message Jim directly. Get personal video responses when your stuck. Usually $2,997 alone.",
     value: "$2,997",
     bonus: true,
   },

@@ -1,11 +1,11 @@
 // ================
 // components/Solution.tsx
 // ================
-"use client";  // Add this if you're using app router
+"use client"; // Add this if you're using app router
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 // Add this import at the top of your existing Solution.tsx file:
-import Image from 'next/image'
+import Image from "next/image";
 
 const steps = [
   {
@@ -33,28 +33,28 @@ const steps = [
 
 const whatYouGet = [
   {
-    icon: "🔍",
-    title: "Your Hidden Pattern Revealed",
+    icon: "🧠",
+    title: "Kill Your Limiting Beliefs",
     description:
-      "Why you self-sabotage, what your resistance protects, and how to break through",
+      "Exercises that prove you can finish things. Stop feeling broken. Start launching businesses.",
   },
   {
-    icon: "👤",
-    title: "Who You Really Are (Without Masks)",
+    icon: "⚡",
+    title: "The 3 Money-Making Skills",
     description:
-      "Your authentic strengths, what makes you unique, and how to use this for success",
+      "We help you to finally pick ONE idea (not 47). Build systems that work. Create habits that stick.",
   },
   {
-    icon: "🗓️",
-    title: "Your 90-Day Action Plan",
+    icon: "📦",
+    title: "Templates & AI-first",
     description:
-      "Exactly what to do (and especially: what NOT to do) to go from $0 to $10K/month",
+      "Website templates. $10K+ offer scripts. Sales emails. Just fill in blanks and launch. No perfectionism.",
   },
   {
-    icon: "🚀",
-    title: "Your Personal Success Formula",
+    icon: "💪",
+    title: "Built-in Accountability",
     description:
-      "How you work best, when you have energy, and how to maintain momentum",
+      "Personal accountability from Jim. Group momentum that pulls you forward. A system that makes quitting harder than continuing.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function Solution() {
   return (
     <>
       {/* Process Section */}
-      <section ref={ref} className="py-20 relative">
+      {/* <section ref={ref} className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function Solution() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What You Get Section */}
       <section className="py-20 relative">
@@ -119,10 +119,8 @@ export default function Solution() {
             transition={{ duration: 0.6 }}
             className="text-3xl lg:text-5xl font-black text-center mb-16"
           >
-            This Is What You Get In Your{" "}
-            <span className="gradient-text">
-              Personal Transformation Report
-            </span>
+            The 4 Things That{" "}
+            <span className="gradient-text">Actually Launch Your Business</span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -144,7 +142,6 @@ export default function Solution() {
           </div>
         </div>
       </section>
-
       {/* Comparison Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
@@ -154,8 +151,8 @@ export default function Solution() {
             transition={{ duration: 0.6 }}
             className="text-3xl lg:text-5xl font-black text-center mb-16"
           >
-            Why This <span className="gradient-text">Actually Works</span> (When
-            Everything Else Fails)
+            Why You Failed Before{" "}
+            <span className="gradient-text">(It Wasn't Your Fault)</span>
           </motion.h2>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -165,17 +162,17 @@ export default function Solution() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-black mb-8 text-adhd-red">
-                ❌ What You've Tried So Far
+                ❌ Built for Neurotypical Brains
               </h3>
               <div className="space-y-4">
                 {[
-                  "Pomodoro timers (works 3 days)",
-                  "Time blocking (too rigid for ADHD)",
-                  "Accountability buddy (shame when you fail)",
-                  "Just work harder (burnout)",
-                  "Medication (zombie mode)",
-                  "Just have discipline (LOL)",
-                  "The 847th productivity app",
+                  "Just be consistent → Your dopamine doesn't work that way",
+                  "Time blocking → Falls apart after day 3",
+                  "Accountability buddy → Both ghost after a week",
+                  "More discipline → Shame spiral when you fail",
+                  "Take medication → Still can't launch a business",
+                  "New app → Abandoned after dopamine wears off",
+                  "$1000's in courses → All unfinished",
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -194,17 +191,17 @@ export default function Solution() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-black mb-8 text-adhd-green">
-                ✅ The ADHD Identity Method™
+                ✅ Built BY Someone With ADHD
               </h3>
               <div className="space-y-4">
                 {[
-                  "Start with WHO you are, not WHAT to do",
-                  "Work WITH your ADHD brain, not against it",
-                  "Use hyperfocus as superpower",
-                  "Flexible systems that adapt",
-                  "Energy management over time management",
-                  "Dopamine-driven planning",
-                  "Authentic success without masks",
+                  "Fix your identity → Business becomes automatic",
+                  "Bite-sized daily tasks → Fits your attention span",
+                  "Energy tracking → Work when you're ON",
+                  "Templates for everything → Ship before perfection kicks in",
+                  "Jim checks daily → Can't ghost when he's watching",
+                  "Community → They get why you struggle",
+                  "Miss a day? → Jim messages you personally",
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
                     <span className="text-adhd-green">✓</span>
@@ -214,6 +211,27 @@ export default function Solution() {
               </div>
             </motion.div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-16 text-center"
+          >
+            <div className="glass-effect p-8 rounded-2xl max-w-3xl mx-auto border border-adhd-yellow/20">
+              <p className="text-xl font-bold text-adhd-yellow mb-4">
+                The difference that changes everything:
+              </p>
+              <p className="text-lg text-gray-300">
+                Every other program starts with tactics. We start with WHO YOU
+                ARE. Because when you fix your identity, the business part
+                becomes easy.
+              </p>
+              <p className="text-sm text-gray-400 mt-4">
+                That's why members say "Why didn't I find this sooner?"
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

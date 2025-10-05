@@ -7,35 +7,62 @@ import { ChevronDown, HelpCircle, MessageCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "What if I quit halfway through like always?",
+    question:
+      "I've started 47 programs and finished 0. Why won't I quit this one?",
     answer:
-      "That's exactly why I designed this differently. The videos are short (max 15 min each), the AI conversation is engaging (like talking to a friend), and you get your report instantly. No waiting, no overwhelm, just quick wins that build momentum.",
+      "Jim checks your progress daily. Miss a task? He messages you personally. The group sees your daily posts. You've never had accountability like this - not shame-based, but 'we won't let you disappear' based. Plus, tasks are only 30 minutes. Even on your worst days, you can manage 30 minutes.",
   },
   {
-    question: "Why does this work when nothing else has?",
+    question: "$497 feels like a lot. What if I can't afford it?",
     answer:
-      "Because we start with WHO you are, not WHAT to do. Every other system tries to force you into their box. We build YOUR box, designed for YOUR brain, YOUR energy patterns, YOUR strengths.",
+      "Real talk: You've probably spent 10x this on courses you never finished. The difference? This one you'll actually complete. The real question: can you afford to stay stuck another year?",
   },
   {
-    question: "Do I need an official ADHD diagnosis?",
+    question:
+      "How is this different from every other 'launch your business' program?",
     answer:
-      "No. If you recognize yourself in the struggles I described, this is for you. Many successful entrepreneurs have ADHD traits without official diagnosis. This system works for anyone who thinks differently.",
+      "Every other program starts with tactics (pick a niche, build a funnel). We start with WHO YOU ARE. We fix your identity first, then business becomes automatic. Plus: built BY someone with ADHD, FOR people with ADHD. Jim failed at 37 businesses before cracking the code. This is that code.",
   },
   {
-    question: "What exactly do I get for $27?",
+    question: "What if I don't have time? My days are already chaotic.",
     answer:
-      "3 video modules (45 min total), AI voice analysis session, your personal transformation report, 90-day action plan, and a bonus 1-on-1 call with me. Everything is instantly accessible after purchase.",
+      "30 minutes average per day. That's it. You can batch tasks during hyperfocus sessions. Miss a day? Fine, catch up tomorrow. The system is flexible because Jim knows ADHD brains don't work 9-5. Most members do their tasks at weird hours when their brain is ON.",
   },
   {
-    question: "Is my privacy protected with the AI?",
+    question: "Do I need a business idea already?",
     answer:
-      "100%. The AI conversation is completely private and encrypted. Your data is never shared, sold, or used for anything except generating your personal report. You can delete everything with one click.",
+      "No. Module 3 helps you find your 'thing' using your ADHD patterns (your failures contain clues). We have a decision matrix that kills analysis paralysis. You'll pick ONE idea by day 20 and stick with it for 90 days. Can't change. That's the rule.",
   },
   {
-    question: "What if it doesn't work for me?",
+    question: "I hate group programs. I don't want to look stupid.",
     answer:
-      "30-day money-back guarantee, no questions asked. If you don't get value, you don't pay. But honestly? If you complete the 60-minute process, you'll have insights worth 100x the price.",
+      "Everyone in the group has ADHD. We've ALL been the 'stupid' one who couldn't do 'simple' things. This is the first place you'll feel normal. Plus, sharing is optional - you can lurk and still get Jim's daily accountability privately.",
   },
+  {
+    question: "What if I'm not tech-savvy?",
+    answer:
+      "Everything is copy-paste templates. Website? Fill in 5 blanks. Emails? Already written. Just customize. We assume you know nothing and build from there. If you can use Word, you can do this.",
+  },
+  {
+    question: "The guarantee sounds too good to be true. What's the catch?",
+    answer:
+      "No catch. Do the daily tasks (we track them). Come to weekly calls (or watch recordings). Share in the community (even just 'done' counts). Don't launch in 90 days = full refund. Jim's reputation depends on you succeeding. That's why our members launch.",
+  },
+  {
+    question: "Is Jim even real? How do I know this isn't a scam?",
+    answer:
+      "Jim runs a 7-figure agency (Seamless Agency) you can Google. Real company, real clients, real results. Plus, you get his direct access for 90 days. Check the testimonials - these are real people you can find online.",
+  },
+  {
+    question: "I'm on ADHD medication. Will this work for me?",
+    answer:
+      "Yes. The system works whether you're medicated or not. Jim was on Ritalin for years, now manages without it. Many members use meds. Some don't. The strategies work regardless because they're built for how ADHD brains actually work. This is no medical advice.",
+  },
+  // {
+  //   question: "What if I miss the founding member deal?",
+  //   answer:
+  //     "Price goes to $997 and becomes a monthly subscription ($197/month for 12 months). No lifetime access. No bonuses. This deal happens once. When these spots are gone, they're gone forever. Next time you see this, it costs double.",
+  // },
 ];
 
 export default function FAQ() {
@@ -59,12 +86,17 @@ export default function FAQ() {
           <div className="inline-flex items-center gap-2 mb-6">
             <span className="indicator-yellow px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
               <MessageCircle className="w-4 h-4" />
-              Real questions from ADHD entrepreneurs
+              Your concerns are valid. Here are real answers.
             </span>
           </div>
           <h2 className="text-3xl lg:text-5xl font-black">
-            Questions? <span className="gradient-text">I Get It.</span>
+            Every Question{" "}
+            <span className="gradient-text">You're Thinking</span>
           </h2>
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+            If your question isn't here, email info@adhdharmony.com and get a
+            personal response within 24 hours
+          </p>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-4">

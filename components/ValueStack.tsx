@@ -2,41 +2,71 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import StripePaymentForm from "./StripePaymentForm";
 import { useState, useEffect } from "react";
-import { Gift, Star, Zap, Brain, FileText, Phone } from "lucide-react";
+import {
+  Gift,
+  Star,
+  Zap,
+  Brain,
+  FileText,
+  Phone,
+  Users,
+  MessageSquare,
+  Rocket,
+  Shield,
+} from "lucide-react";
 
 const valueItems = [
   {
     icon: Brain,
-    title: "ADHD Identity Reset™ Video Training (3 modules)",
+    title: "90-Day Business Launch Program (9 Modules)",
     description:
-      "Discover who you are, where you stand, and where you want to go",
-    value: "$97",
-  },
-  {
-    icon: Zap,
-    title: "AI Voice Analysis Session (15 personal prompts)",
-    description: "The AI asks follow-ups until it truly understands you",
-    value: "$147",
-  },
-  {
-    icon: FileText,
-    title: "Your Personal Transformation Report",
-    description: "Your unique roadmap based on your answers",
-    value: "$197",
-  },
-  {
-    icon: Star,
-    title: "90-Day ADHD Success Blueprint",
-    description: "Step-by-step what to do (and especially: what not to do)",
-    value: "$97",
+      "Identity transformation + business systems. From chronic starter to $10K/month.",
+    value: "$2,997",
   },
   {
     icon: Phone,
-    title: "BONUS: Free 1-on-1 Coaching Call with Jim",
-    description: "30 minutes personal guidance (limited spots)",
+    title: "Weekly Group Coaching Calls with Jim (12 weeks)",
+    description:
+      "Get unstuck in real-time. Ask anything. Recordings if you miss.",
+    value: "$1,997",
+  },
+  {
+    icon: Zap,
+    title: "The Daily Accountability System™",
+    description:
+      "Jim checks your progress everyday. Miss a day? He messages you. Can't fail.",
+    value: "$997",
+  },
+  {
+    icon: FileText,
+    title: "Copy-Paste Launch Templates",
+    description:
+      "Website, $10K+ offer script, emails that sell, sales call scripts. Everything done for you.",
+    value: "$797",
+  },
+  {
+    icon: Users,
+    title: "Private ADHD Entrepreneur Community",
+    description:
+      "Other members who get it. 24/7 support. Never feel alone in the 3am spirals again.",
     value: "$497",
+  },
+  {
+    icon: MessageSquare,
+    title: "BONUS: Jim's Direct Access (90 days)",
+    description:
+      "Message Jim directly. Get personal video responses within 24 hours. Usually $2,997 alone.",
+    value: "$2,997",
     bonus: true,
   },
+  // {
+  //   icon: Rocket,
+  //   title: "FOUNDING MEMBER: All Future Updates Free",
+  //   description:
+  //     "Every new module, template, workshop we ever create. Yours forever. No extra cost.",
+  //   value: "$1,997",
+  //   bonus: true,
+  // },
 ];
 
 export default function ValueStack() {
@@ -67,7 +97,7 @@ export default function ValueStack() {
   }, []);
 
   const totalValue = valueItems.reduce((sum, item) => {
-    return sum + parseInt(item.value.replace("$", ""));
+    return sum + parseInt(item.value.replace("$", "").replace(",", ""));
   }, 0);
 
   return (
@@ -84,16 +114,21 @@ export default function ValueStack() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="indicator-green px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-              <Gift className="w-4 h-4" />
-              Total value: ${totalValue}
+          <h2 className="text-3xl lg:text-5xl font-black mb-4">
+            Everything You Need To Launch In 90 Days
+          </h2>
+          <div className="text-2xl">
+            <span className="text-gray-500 font-medium">Total Value:</span>{" "}
+            <span className="line-through text-gray-400">
+              ${totalValue.toLocaleString()}
+            </span>{" "}
+            <span className="gradient-text text-4xl font-black">
+              Today: $497
             </span>
           </div>
-          <h2 className="text-3xl lg:text-5xl font-black">
-            Everything You Get Today For{" "}
-            <span className="gradient-text">$27</span>
-          </h2>
+          <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
+            One-time payment • 1 year of access • Launch or full refund
+          </p>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-4">
@@ -111,6 +146,12 @@ export default function ValueStack() {
                     : "border border-glass-border"
                 }`}
               >
+                {item.bonus && (
+                  <div className="absolute -top-1 -right-1 bg-adhd-yellow text-black px-3 py-1 rounded-bl-xl text-xs font-bold">
+                    BONUS
+                  </div>
+                )}
+
                 <div
                   className={`p-3 rounded-lg ${
                     item.bonus ? "bg-adhd-yellow/10" : "bg-dark-surface"
@@ -134,26 +175,60 @@ export default function ValueStack() {
                   <p className="text-gray-400 text-sm">{item.description}</p>
                 </div>
 
-                <div
-                  className={`text-2xl font-bold ${
-                    item.bonus
-                      ? "text-adhd-yellow"
-                      : "text-gray-500 line-through"
-                  }`}
-                >
-                  {item.value}
+                <div className="text-right">
+                  <div
+                    className={`text-sm text-gray-500 ${
+                      !item.bonus && "line-through"
+                    }`}
+                  >
+                    {item.value}
+                  </div>
+                  {item.bonus && (
+                    <div className="text-xs text-adhd-yellow font-bold">
+                      INCLUDED
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );
           })}
         </div>
 
+        {/* Guarantee box */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className="max-w-2xl mx-auto mt-12 text-center"
+        >
+          <div className="glass-effect p-8 rounded-2xl border border-adhd-green/30">
+            <Shield className="w-12 h-12 text-adhd-green mx-auto mb-4" />
+            <h3 className="text-2xl font-black mb-4">
+              The "You Actually Launch" Guarantee
+            </h3>
+            <p className="text-xl font-bold text-adhd-green">
+              Don't launch in 90 days = 100% money back
+            </p>
+            <p className="text-sm text-gray-400 mt-4">
+              No tricks. No "you didn't try hard enough." Just results or
+              refund.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.6, delay: 1.2 }}
           className="max-w-lg mx-auto mt-12"
         >
+          <div className="text-center mb-6">
+            <p className="text-lg font-bold text-adhd-yellow mb-2">
+              You save ${(totalValue - 497).toLocaleString()} today
+            </p>
+          </div>
+
           <StripePaymentForm />
         </motion.div>
       </div>

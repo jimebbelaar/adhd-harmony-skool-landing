@@ -30,7 +30,7 @@ export default function Hero() {
               >
                 <span className="indicator-yellow px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                   <Zap className="w-4 h-4" />
-                  For (aspiring) ADHD Entrepreneurs
+                  For ADHD Entrepreneurs Who Are Done Starting & Stopping
                 </span>
               </motion.div>
 
@@ -38,10 +38,11 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-6xl font-black mb-6"
+                className="text-3xl sm:text-3xl lg:text-5xl font-black mb-6"
               >
-                Stop Self-Sabotaging And Finally Build That{" "}
-                <span className="gradient-text">$10K/Month</span> Business
+                Launch Your <span className="gradient-text">$10K/Month </span>
+                Business <span className="gradient-text">In 90 Days </span>
+                With The Only System That Actually Works For ADHD Brains
               </motion.h1>
 
               <motion.p
@@ -50,8 +51,9 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed"
               >
-                Discover in 4 minutes why you always quit halfway - and get a
-                personal roadmap that actually works for your ADHD brain
+                You're about to discover why you've never finished a business
+                program (and it's not what you think) - get the only system
+                that actually works with your ADHD, not against it
               </motion.p>
             </div>
 

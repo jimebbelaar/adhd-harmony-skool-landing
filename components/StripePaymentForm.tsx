@@ -60,10 +60,10 @@ export default function EmbeddedCheckoutForm() {
   const [mounted, setMounted] = useState(false);
 
   const [priceInfo, setPriceInfo] = useState<PriceInfo>({
-    price: "497",
+    price: "297",
     currency: "USD",
     productName: "ADHD Harmony Program",
-    originalPrice: "10282",
+    originalPrice: "4997",
   });
   const [priceLoading, setPriceLoading] = useState(true);
 
@@ -90,7 +90,7 @@ export default function EmbeddedCheckoutForm() {
             price: parseFloat(data.price).toFixed(0),
             originalPrice: data.originalPrice
               ? parseFloat(data.originalPrice).toFixed(0)
-              : "10282",
+              : "4997",
           });
         }
       } catch (error) {

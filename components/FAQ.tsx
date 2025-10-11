@@ -13,7 +13,7 @@ const faqs = [
       "Jim checks your progress daily. Miss a task? He messages you personally. The group sees your daily posts. You've never had accountability like this - not shame-based, but 'we won't let you disappear' based. Plus, tasks are only 30 minutes. Even on your worst days, you can manage 30 minutes.",
   },
   {
-    question: "$497 feels like a lot. What if I can't afford it?",
+    question: "$297 feels like a lot. What if I can't afford it?",
     answer:
       "Real talk: You've probably spent 10x this on courses you never finished. The difference? This one you'll actually complete. The real question: can you afford to stay stuck another year?",
   },

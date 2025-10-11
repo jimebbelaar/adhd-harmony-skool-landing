@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
         currency: "USD",
         productName: "ADHD Harmony Program",
         productDescription: null,
-        originalPrice: "10282.00",
+        originalPrice: "4997.00",
         priceId: null,
         error: error.message,
       },

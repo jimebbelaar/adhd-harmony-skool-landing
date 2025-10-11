@@ -21,53 +21,44 @@ const valueItems = [
     title: "90-Day Business Launch Program (All Modules)",
     description:
       "Identity transformation + business systems. From chronic starter to $10K/month.",
-    value: "$2,997",
+    value: "$2,000",
   },
   {
     icon: FileText,
     title: "Plug-and-Play Templates",
     description:
-      "Website, $10K+ offer script, emails that sell, sales call scripts. Everything done for you.",
-    value: "$797",
+      "Website, offer sccrips, emails that sell, sales call scripts. Everything done with you.",
+    value: "$400",
   },
   {
     icon: Zap,
     title: "The Daily Accountability System™",
     description:
-      "Jim checks your progress everyday. Miss a day? He messages you. Can't fail.",
-    value: "$997",
+      "If you want: Jim checks your progress daily. Miss a day? He messages you.",
+    value: "$300",
   },
   {
     icon: Users,
     title: "Private ADHD Entrepreneur Community",
     description:
       "Other members who get it. 24/7 support. Never feel alone in the 3am spirals again.",
-    value: "$497",
+    value: "$500",
   },
   {
     icon: Phone,
     title: "Weekly Group Coaching Calls with Jim",
     description:
       "Get unstuck in real-time. Ask anything. Recordings if you miss.",
-    value: "$1,997",
+    value: "$800",
   },
-
   {
     icon: MessageSquare,
     title: "BONUS: Jim's Direct Access (90 days)",
     description:
-      "Message Jim directly. Get personal video responses when your stuck. Usually $2,997 alone.",
-    value: "$2,997",
+      "Message Jim directly. Get personal video responses when you're stuck. Usually $2,997 alone.",
+    value: "$997",
     bonus: true,
   },
-  // {
-  //   icon: Rocket,
-  //   title: "FOUNDING MEMBER: All Future Updates Free",
-  //   description:
-  //     "Every new module, template, workshop we ever create. Yours forever. No extra cost.",
-  //   value: "$1,997",
-  //   bonus: true,
-  // },
 ];
 
 export default function ValueStack() {
@@ -124,11 +115,11 @@ export default function ValueStack() {
               ${totalValue.toLocaleString()}
             </span>{" "}
             <span className="gradient-text text-4xl font-black">
-              Today: $497
+              Today: $297
             </span>
           </div>
           <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
-            One-time payment • 1 year of access • Launch or full refund
+            One-time payment • Launch or full refund
           </p>
         </motion.div>
 
@@ -222,7 +213,7 @@ export default function ValueStack() {
         >
           <div className="text-center mb-6">
             <p className="text-lg font-bold text-adhd-yellow mb-2">
-              You save ${(totalValue - 497).toLocaleString()} today
+              You save ${(totalValue - 297).toLocaleString()} today
             </p>
           </div>
 
